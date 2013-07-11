@@ -1,0 +1,55 @@
+<configuration>
+	<connectionStrings>
+		<connectionString name="1" connectionString="provider=System.Data.SqlClient;provider connection string=&quot;Data Source=localhost;Initial Catalog=BrainwareDistiller;User Id=sa;Password=ImageNow!;Integrated Security=false;MultipleActiveResultSets=True&quot;" />
+		<connectionString name="2" connectionString="provider=System.Data.SqlClient;provider connection string=&quot;Data Source=localhost;Initial Catalog=BrainwareDistiller;User Id=sa;Password=ImageNow!;Integrated Security=false;MultipleActiveResultSets=True&quot;" />
+	</connectionStrings>
+	<classes>
+		<class name="Statement">
+			<fields>
+				<!-- ASSA Config -->
+				<field name="CarrierASSA" type="ASSA">
+					<ASSAConfig>
+						<!-- Enable Alphanumeric Identifier -->
+						<AlphaNum>YES</AlphaNum> 					<!-- If the Identifier column is Alphanumeric set to YES, NO Otherwise-->
+						
+						<!-- Import settings -->
+						<AutoImportOption>ODBC</AutoImportOption>	<!-- Type of the Import NONE/FILE/ODBC -->
+						<!--File Import settings-->
+						<FileRelative>YES</FileRelative>
+						<ImportPathFilename></ImportPathFilename>
+						<ImportFilename></ImportFilename>
+						<!--ODBC Import settings-->
+						<ImportODBCDSN>hroneprd</ImportODBCDSN>
+						<ImportODBCSelect>SELECT * FROM CARRIER_VIEW</ImportODBCSelect>
+						<ImportODBCUser>imagenow_user</ImportODBCUser>
+						<ImportODBCPWD>imgn0w</ImportODBCPWD>
+						
+						<!--Vendor Pool Settings -->
+						<PoolRelative>YES</PoolRelative>
+						<PoolPath></PoolPath>						<!-- Used If Pool Relative is set to YES -->
+						<PoolDirectory>Pool</PoolDirectory>			<!-- Used If Pool Relative is set to NO -->	
+						<PoolName>Vendor</PoolName>					<!-- Name of the Pool File -->
+						
+						<!-- Search configuration parameters -->
+						<FirstPageOnly>YES</FirstPageOnly>
+						<PageZoneALeft>0</PageZoneALeft>
+						<PageZoneAWidth>100</PageZoneAWidth>
+						<PageZoneATop>0</PageZoneATop>
+						<PageZoneAHeight>25</PageZoneAHeight>
+						<PageZoneBLeft>0</PageZoneBLeft>
+						<PageZoneBWidth>100</PageZoneBWidth>
+						<PageZoneBTop>80</PageZoneBTop>
+						<PageZoneBHeight>20</PageZoneBHeight>
+					</ASSAConfig>
+				</field>
+				
+				<!-- Format Analysus Engine Config -->
+				<field name="StatementDate" type="Format">
+					<formats>
+						<format formatString="12345" compareMethod="CdrTypeLevenShtein" ignoreCharacters=""/>
+					</formats>
+				</field>	
+			</fields>
+		</class>
+	</classes>
+</configuration>
