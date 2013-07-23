@@ -52,4 +52,17 @@
 			</fields>
 		</class>
 	</classes>
+	<options>
+		
+		<option name='PolicyLookup_ConnectionString' value='1'/>
+		
+		<!-- Producer Code lookup configuratin -->
+		<option name='ProducerCode_ValidateFromHistory' value='YES'/>
+		<option name='ProducerCode_ConnectionString' 	value='2'/>
+		<option name='ProducerCode_Table' 				value='IASC_BW_ProducerCode_History'/>
+		<option name='ProducerCode_Table_CarrierID' 	value='CarrierID'/>
+		<option name='ProducerCode_Table_ProducerCode' 	value='ProducerCode'/>
+		<option name='ProducerCode_Table_LastUsedDate' 	value='LastUsedDate'/>
+		
+	</options>
 </configuration>
